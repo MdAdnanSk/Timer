@@ -28,7 +28,10 @@ function displayTime(second){
     const min=Math.floor(second/60);
     const sec=Math.floor(second%60);
 
-    timeshow.innerHTML=`${min}:${sec}`;
+    timeshow.innerHTML=`${min < 10 ?"0":""}${min}:${sec < 10 ? "0":""}${sec}`;
+//     timeH.innerHTML = `
+//   ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+//   `;
 };
 
 function endTime(){
